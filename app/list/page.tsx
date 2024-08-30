@@ -22,7 +22,9 @@ const ListPage = () => {
         </div>
       </div>
       {/* FILTER */}
-      <Filter />
+      <Suspense fallback={<div>Loading Filters...</div>}>
+        <Filter />
+      </Suspense>
       {/* PRODUCTS */}
       <h1 className="mt-12 text-xl font-semibold">Shoes For You!</h1>
       <Suspense fallback={<div>Loading...</div>}>
